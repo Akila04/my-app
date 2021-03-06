@@ -47,7 +47,7 @@ function App() {
 
 
   const submitHandler = () => {
-    const url = "https://54.211.3.179:3000?name="+name+"&father="+fatherName+"&phone="+phoneNumber+"&message="+message
+    const url = "http://54.211.3.179:3000?name="+name+"&father="+fatherName+"&phone="+phoneNumber+"&message="+message
     //axios.get({url, data:{message: message}, header: {type:"application/json"}}).then((response) => {
     axios.get(url).then((response) => {
       swal("தங்கள் கருத்துகள் வெற்றிகரமாக பதிவு செய்யப்பட்டுவிட்டது!!!");
