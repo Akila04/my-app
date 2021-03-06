@@ -50,18 +50,16 @@ function App() {
     const url = "https://54.211.3.179:3000?name="+name+"&father="+fatherName+"&phone="+phoneNumber+"&message="+message
     //axios.get({url, data:{message: message}, header: {type:"application/json"}}).then((response) => {
     axios.get(url).then((response) => {
-      console.log(response);
       swal("தங்கள் கருத்துகள் வெற்றிகரமாக பதிவு செய்யப்பட்டுவிட்டது!!!");
       setBody(1);
       //தங்கள் கருத்துகள் வெற்றிகரமாக பதிவு செய்யப்பட்டுவிட்டது!
     }).catch((error) => {
       if(error.response)
-        swal(error.response);
+        swal(JSON.stringify(error.response));
       else if(error.request)
-        swal(error.request);
+        swal(JSON.stringify(error.request));
       else
-        swal(error.message);
-      
+        swal(JSON.stringify(error.message));
       setBody(1);
     })
 
