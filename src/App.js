@@ -47,7 +47,7 @@ function App() {
 
 
   const submitHandler = () => {
-    const url = "http://54.211.3.179:3000?name="+name+"&father="+fatherName+"&phone="+phoneNumber+"&message="+message
+    const url = "https://54.211.3.179:3000?name="+name+"&father="+fatherName+"&phone="+phoneNumber+"&message="+message
     //axios.get({url, data:{message: message}, header: {type:"application/json"}}).then((response) => {
     axios.get(url).then((response) => {
       console.log(response);
