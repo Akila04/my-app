@@ -54,11 +54,7 @@ function App() {
       setBody(1);
       //தங்கள் கருத்துகள் வெற்றிகரமாக பதிவு செய்யப்பட்டுவிட்டது!
     }).catch((error) => {
-      if(error.response){
-        swal(JSON.stringify(error.response));
-        swal(JSON.stringify(error.request));
-        swal(JSON.stringify(error.message));
-      }
+      swal(JSON.stringify(error));
       setBody(1);
     })
 
