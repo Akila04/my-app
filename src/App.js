@@ -47,14 +47,14 @@ function App() {
 
 
   const submitHandler = () => {
-    const url = "https://54.211.3.179:3000?name="+name+"&father="+fatherName+"&phone="+phoneNumber+"&message="+message
+    const url = "https://g5sknh5hfj.execute-api.us-east-1.amazonaws.com/default/CVB?name="+name+"&father="+fatherName+"&phone="+phoneNumber+"&message="+message
     //axios.get({url, data:{message: message}, header: {type:"application/json"}}).then((response) => {
     axios.get(url).then((response) => {
       swal("தங்கள் கருத்துகள் வெற்றிகரமாக பதிவு செய்யப்பட்டுவிட்டது!!!");
       setBody(1);
       //தங்கள் கருத்துகள் வெற்றிகரமாக பதிவு செய்யப்பட்டுவிட்டது!
     }).catch((error) => {
-      swal(JSON.stringify(error));
+      swal("Error");
       setBody(1);
     })
 
