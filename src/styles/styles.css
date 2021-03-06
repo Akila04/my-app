@@ -1,0 +1,37 @@
+.photo {
+    height: 600px;
+    width: 100%;
+  }
+
+
+.body {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+  }
+
+.body-content {
+    height: 300px;
+    width: 50%;
+    margin:auto;
+ }
+
+
+.btnn {
+    padding: 10px;
+    margin: 20px !important;
+ }
+
+ .body-head {
+  font-size: 24px;
+  font-weight: 600;
+  color:  #ffb400;
+  padding: 20px
+ }
+
+ @media only screen and (max-width: 600px) {
+  .photo {
+    height: 200px;
+    width: 100%;
+  }
+}
